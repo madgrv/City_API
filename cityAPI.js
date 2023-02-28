@@ -59,12 +59,12 @@ async function getInfo() {
     }
 }
 
-document.getElementById("citySearch").addEventListener("keyup", function(e) {
-    if (e.keyCode === 13) { //if enter (keyCode 13) is pressed...
-        document.getElementById("button").click(); //simulates click action on the addButton id element
-        console.log("click")
-    }
-}); //needs double chcking
+// document.getElementById("citySearch").addEventListener("keyup", function(e) {
+//     if (e.keyCode === 13) { //if enter (keyCode 13) is pressed...
+//         document.getElementById("button").click(); //simulates click action on the addButton id element
+//         console.log("click")
+//     }
+// }); //needs double chcking
 
 // getInfo() //call function, used for testing and debugging
 
