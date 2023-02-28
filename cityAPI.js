@@ -20,7 +20,6 @@ const optionsWeather = {
 
 async function getInfo() {
     let citySearch = document.getElementById("citySearch").value.toLowerCase();
-    citySearch.innerHTML = ""
 
     try {
         let res = await fetch(`https://wft-geo-db.p.rapidapi.com/v1/geo/cities?limit=10&namePrefix=${citySearch}&sort=-population`, options)
@@ -60,7 +59,12 @@ async function getInfo() {
     }
 }
 
-
+document.getElementById("citySearch").addEventListener("keyup", function(e) {
+    if (e.keyCode === 13) { //if enter (keyCode 13) is pressed...
+        document.getElementById("button").click(); //simulates click action on the addButton id element
+        console.log("click")
+    }
+}); //needs double chcking
 
 // getInfo() //call function, used for testing and debugging
 

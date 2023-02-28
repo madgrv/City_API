@@ -5,30 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City Weather App</title>
-    <!-- 'Access-Control-Allow-Origin' -->
+    <style>
+        
+        * {
+            color: rgb(175, 254, 226);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        body {
+            background: rgb(2,0,33);
+            background: -moz-linear-gradient(144deg, rgba(2,0,33,1) 0%, rgba(55,4,82,1) 38%, rgba(148,66,0,1) 100%);
+            background: -webkit-linear-gradient(144deg, rgba(2,0,33,1) 0%, rgba(55,4,82,1) 38%, rgba(148,66,0,1) 100%);
+            background: linear-gradient(144deg, rgba(2,0,33,1) 0%, rgba(55,4,82,1) 38%, rgba(148,66,0,1) 100%);        
+        }
+
+        button {
+            font-size: larger;
+            transition: 0.1s;
+            box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.276);
+
+        }
+
+        button:hover {
+            /* color: rgb(244, 255, 251); */
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.606);
+            box-shadow: 0 6px 7px 3px rgba(0, 0, 0, 0.276);
+        }
+
+        button:active {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.606);
+            box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.276);
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+        }
+
+        .boxCenter {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .center {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .glass {
+            border-radius: 16px;
+            size:100% ;
+            padding: 2vw;
+            /* margin: 3vw; */
+            background-color: #ffffff51;
+            -webkit-backdrop-filter: blur(4px);
+            border: none;
+        }
+
+        ::placeholder {
+            color: rgba(127, 255, 212, 0.703);
+        }
+
+        #mainBox {
+            padding: 6%;
+            border-radius: 28px;
+            box-shadow: 0 4px 33px 15px rgba(0, 0, 0, 0.538);
+            background: rgb(7,0,117);
+            background: -moz-linear-gradient(144deg, rgba(7,0,117,1) 0%, rgba(116,12,171,1) 38%, rgba(255,114,0,1) 100%);
+            background: -webkit-linear-gradient(144deg, rgba(7,0,117,1) 0%, rgba(116,12,171,1) 38%, rgba(255,114,0,1) 100%);
+            background: linear-gradient(144deg, rgba(7,0,117,1) 0%, rgba(116,12,171,1) 38%, rgba(255,114,0,1) 100%);
+        }
+
+        #citySearch {
+            border-radius: 18px;
+        }
+
+
+    </style>
 </head>
 <body>
-    <div>
-        <h1>City weather App</h1>
-        <form>
-            <input type="text" placeholder="Enter a city" id="citySearch"></input>
-            <button type="button" onclick=getInfo()>Get Info</button>
-        </form>
-        <div id="cityInfo">
-            <h2 id="cityName"></h2>
-            <p id="region"></p>
-            <p id="country"></p>
-            <p id="temperature"></p>
-            <br>
-            <!-- <p id="timeZone"></p>
-            <p id="localTime"></p>
-            <br> -->
-            <p id="countryCode"></p>
-            <p id="population"></p>
-            <p id="elevation"></p>
-            <p id="latitude"></p>
-            <p id="longitude"></p>
-
+    <div class="boxCenter">
+        <div id="mainBox">
+            <div class="center" style="text-align: center;">
+                <h1>City API</h1>
+                <form>
+                    <input type="text" placeholder="Enter a city" id="citySearch" class="glass"></input>
+                    <button type="button" id="button" class="glass" onclick=getInfo() style="margin: 8%;">Get Info</button>
+                </form>
+            </div>
+            <div id="cityInfo">
+                <h2 id="cityName"></h2>
+                <p id="region"></p>
+                <p id="country"></p>
+                <p id="temperature"></p>
+                <br>
+                <p id="countryCode"></p>
+                <p id="population"></p>
+                <p id="elevation"></p>
+                <p id="latitude"></p>
+                <p id="longitude"></p>
+            </div>
         </div>
     </div>
     
