@@ -2,6 +2,8 @@
 
 A web app that searches and display baisc city information with real time temperature
 
+_Download project folder and open HTML file to use_
+
 ## City information
 
 Displays a city basic information fetching data from the https://wft-geo-db.p.rapidapi.com API
