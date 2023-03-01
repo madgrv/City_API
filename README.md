@@ -15,13 +15,9 @@ It also usees DOM manipulation to display the data on a HTML user interface.
 
 1. Donload the project folder.
 2. Open the `cityAPI.html` file in a web browser.
-<<<<<<< HEAD
 3. Enter the name of the city you are looking for.
 4. Click the "Get Info" button to see the result.
-=======
-2. Enter the name of the city you are looking for.
-3. Click the "Get Info" button to see the result.
->>>>>>> e9103e9fc637e651508fde25cbccd0f5f1f3e3a6
+
 
 ## Screenshots
 
