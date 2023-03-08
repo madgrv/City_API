@@ -13,9 +13,8 @@ It also usees DOM manipulation to display the data on a HTML user interface.
 
 ## Usage
 
-1. Donload the project folder.
-2. Open the `cityAPI.html` file in a web browser.
-3. Enter the name of the city you are looking for.
+1. Go to https://madgrv.github.io/City_API/ alternatively download the project folder and open `index.html` in a browser.
+2. Enter the name of the city you are looking for.
 4. Click the "Get Info" button to see the result.
 
 
